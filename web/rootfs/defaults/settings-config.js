@@ -628,3 +628,9 @@ config.whiteboard.userLimit = 25;
 config.testing = {
     enableCodecSelectionAPI: true
 };
+
+// Kanvene branding overrides
+config.helpCentreURL = 'https://kanvene.com';
+config.transcription = config.transcription || {};
+config.liveStreaming = config.liveStreaming || {};
+config.liveStreaming.helpLink = 'https://kanvene.com';

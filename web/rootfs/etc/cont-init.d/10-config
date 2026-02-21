@@ -132,6 +132,9 @@ tpl /defaults/default > /config/nginx/site-confs/default
 
 tpl /defaults/system-config.js > /config/config.js
 tpl /defaults/settings-config.js >> /config/config.js
+if [[ -f "/defaults/custom-config.js" ]]; then
+    cp /defaults/custom-config.js /config/custom-config.js
+fi
 if [[ -f "/config/custom-config.js" ]]; then
     cat /config/custom-config.js >> /config/config.js
 fi
