@@ -17,6 +17,19 @@ if [ -f "/usr/share/jitsi-meet/title.html" ]; then
     echo "Patched /usr/share/jitsi-meet/title.html"
 fi
 
+# Patch language files for welcome page
+if [ -f "/usr/share/jitsi-meet/lang/main.json" ]; then
+    sed -i 's/"title": "Jitsi Meet"/"title": "Kanvene"/g' /usr/share/jitsi-meet/lang/main.json
+    sed -i 's/"Jitsi Meet"/"Kanvene"/g' /usr/share/jitsi-meet/lang/main.json
+    echo "Patched /usr/share/jitsi-meet/lang/main.json"
+fi
+
+if [ -f "/usr/share/jitsi-meet/lang/main-enGB.json" ]; then
+    sed -i 's/"title": "Jitsi Meet"/"title": "Kanvene"/g' /usr/share/jitsi-meet/lang/main-enGB.json
+    sed -i 's/"Jitsi Meet"/"Kanvene"/g' /usr/share/jitsi-meet/lang/main-enGB.json
+    echo "Patched /usr/share/jitsi-meet/lang/main-enGB.json"
+fi
+
 # Patch 404 page
 if [ -f "/usr/share/jitsi-meet/static/404.html" ]; then
     sed -i 's/Jitsi Meet/Kanvene/g' /usr/share/jitsi-meet/static/404.html
