@@ -137,6 +137,9 @@ if [[ -f "/config/custom-config.js" ]]; then
 fi
 
 cp /defaults/interface_config.js /config/interface_config.js
+if [[ -f "/defaults/custom-interface_config.js" ]]; then
+    cp /defaults/custom-interface_config.js /config/custom-interface_config.js
+fi
 if [[ -f "/config/custom-interface_config.js" ]]; then
     cat /config/custom-interface_config.js >> /config/interface_config.js
 fi
