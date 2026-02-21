@@ -1,0 +1,45 @@
+#!/usr/bin/with-contenv bash
+
+# Patch Jitsi branding in installed HTML/JS files
+echo "Applying Kanvene branding..."
+
+# Patch index.html and other HTML files
+if [ -f "/usr/share/jitsi-meet/index.html" ]; then
+    sed -i 's/<title>Jitsi Meet<\/title>/<title>Kanvene<\/title>/g' /usr/share/jitsi-meet/index.html
+    sed -i 's/content="Jitsi Meet"/content="Kanvene"/g' /usr/share/jitsi-meet/index.html
+    sed -i 's/Jitsi Meet/Kanvene/g' /usr/share/jitsi-meet/index.html
+    echo "Patched /usr/share/jitsi-meet/index.html"
+fi
+
+# Patch title.html if it exists
+if [ -f "/usr/share/jitsi-meet/title.html" ]; then
+    sed -i 's/Jitsi Meet/Kanvene/g' /usr/share/jitsi-meet/title.html
+    echo "Patched /usr/share/jitsi-meet/title.html"
+fi
+
+# Patch 404 page
+if [ -f "/usr/share/jitsi-meet/static/404.html" ]; then
+    sed -i 's/Jitsi Meet/Kanvene/g' /usr/share/jitsi-meet/static/404.html
+    sed -i 's/https:\/\/jitsi.org/https:\/\/kanvene.com/g' /usr/share/jitsi-meet/static/404.html
+    echo "Patched /usr/share/jitsi-meet/static/404.html"
+fi
+
+# Patch close page if it exists
+if [ -f "/usr/share/jitsi-meet/static/close.html" ]; then
+    sed -i 's/Jitsi Meet/Kanvene/g' /usr/share/jitsi-meet/static/close.html
+    echo "Patched /usr/share/jitsi-meet/static/close.html"
+fi
+
+# Patch close2 page if it exists
+if [ -f "/usr/share/jitsi-meet/static/close2.html" ]; then
+    sed -i 's/Jitsi Meet/Kanvene/g' /usr/share/jitsi-meet/static/close2.html
+    echo "Patched /usr/share/jitsi-meet/static/close2.html"
+fi
+
+# Patch close3 page if it exists
+if [ -f "/usr/share/jitsi-meet/static/close3.html" ]; then
+    sed -i 's/Jitsi Meet/Kanvene/g' /usr/share/jitsi-meet/static/close3.html
+    echo "Patched /usr/share/jitsi-meet/static/close3.html"
+fi
+
+echo "Branding patches applied successfully"
