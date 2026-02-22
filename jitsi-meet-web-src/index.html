@@ -9,6 +9,7 @@
 
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
     <link rel="stylesheet" href="css/all.css?v=9040">
+    <link rel="stylesheet" href="css/kanvene-custom-theme.css">
     <!--#include virtual="fonts.html"-->
     <link rel="manifest" id="manifest-placeholder">
 
@@ -22,6 +23,19 @@
                 : pathname.substring(0, contextRootEndIndex + 1)
             );
         }
+        
+        // Redirect root welcome page to kanvene.com
+        const path = window.location.pathname;
+        if (path === '/' || path === '/index.html') {
+            const hasQueryParams = window.location.search || Object.keys(window.location.hash || {}).length > 0;
+            if (!hasQueryParams) {
+                // This is the welcome page with no parameters, redirect after a short delay
+                setTimeout(() => {
+                    window.location.href = 'https://kanvene.com';
+                }, 1000);
+            }
+        }
+        
         window.EXCALIDRAW_ASSET_PATH = 'libs/';
         // Dynamically generate the manifest location URL. It must be served from the document origin, and we may have
         // the base pointing to the CDN. This way we can generate a full URL which will bypass the base.

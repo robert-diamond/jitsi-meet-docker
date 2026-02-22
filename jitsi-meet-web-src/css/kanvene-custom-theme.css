@@ -1,0 +1,71 @@
+/* Kanvene Custom Theme */
+
+/* Primary Kanvene Colors - Customize these to match your brand */
+:root {
+  --kanvene-primary: #006b9e; /* Kanvene Primary Blue */
+  --kanvene-secondary: #0099cc; /* Kanvene Secondary Light Blue */
+  --kanvene-accent: #ffb81c; /* Kanvene Accent Yellow */
+  --kanvene-dark: #003d5c; /* Kanvene Dark */
+  --kanvene-light: #e8f4f8; /* Kanvene Light */
+}
+
+/* Header and Navigation */
+.toolbox-content-items,
+.toolbox-button:hover {
+  background-color: var(--kanvene-primary) !important;
+}
+
+/* Main buttons */
+.button-primary,
+.btn-primary {
+  background-color: var(--kanvene-primary) !important;
+  border-color: var(--kanvene-primary) !important;
+}
+
+.button-primary:hover,
+.btn-primary:hover {
+  background-color: var(--kanvene-secondary) !important;
+  border-color: var(--kanvene-secondary) !important;
+}
+
+/* Accent elements */
+.accent-button,
+.action-button {
+  background-color: var(--kanvene-accent) !important;
+}
+
+/* Title bars and headers */
+.titlebar {
+  background-color: var(--kanvene-primary) !important;
+}
+
+/* Conference name styling */
+.conference-name {
+  color: var(--kanvene-primary) !important;
+}
+
+/* Links */
+a {
+  color: var(--kanvene-primary) !important;
+}
+
+a:hover {
+  color: var(--kanvene-secondary) !important;
+}
+
+/* Participants list styling */
+.participants-section {
+  background-color: var(--kanvene-light) !important;
+}
+
+/* Bottom toolbar */
+.bottom-toolbar {
+  background-color: rgba(0, 107, 158, 0.95) !important;
+}
+
+/* Custom Kanvene branding text */
+.kanvene-branding::after {
+  content: " by Kanvene";
+  color: var(--kanvene-primary);
+  font-weight: bold;
+}
