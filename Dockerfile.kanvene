@@ -6,8 +6,14 @@ COPY jitsi-meet-web-src/title.html /usr/share/jitsi-meet/title.html
 COPY jitsi-meet-web-src/index.html /usr/share/jitsi-meet/index.html
 COPY jitsi-meet-web-src/css/kanvene-custom-theme.css /usr/share/jitsi-meet/css/kanvene-custom-theme.css
 
-# Copy custom logos
+# Copy all custom logos and image assets
 COPY jitsi-meet-web-src/images/jitsilogo.png /usr/share/jitsi-meet/images/jitsilogo.png
+COPY jitsi-meet-web-src/images/jitsilogo.svg /usr/share/jitsi-meet/images/jitsilogo.svg
 COPY jitsi-meet-web-src/images/kanvene-logo.svg /usr/share/jitsi-meet/images/kanvene-logo.svg
+COPY jitsi-meet-web-src/images/watermark.svg /usr/share/jitsi-meet/images/watermark.svg
+COPY jitsi-meet-web-src/images/logo-deep-linking.png /usr/share/jitsi-meet/images/logo-deep-linking.png
+COPY jitsi-meet-web-src/images/logo-deep-linking-mobile.png /usr/share/jitsi-meet/images/logo-deep-linking-mobile.png
+COPY jitsi-meet-web-src/images/apple-touch-icon.png /usr/share/jitsi-meet/images/apple-touch-icon.png
+COPY jitsi-meet-web-src/images/favicon.svg /usr/share/jitsi-meet/images/favicon.svg
 
 # Image inherits from jitsi/web, so all entry points and services are already configured
