@@ -6,8 +6,8 @@ COPY jitsi-meet-web-src/title.html /usr/share/jitsi-meet/title.html
 COPY jitsi-meet-web-src/index.html /usr/share/jitsi-meet/index.html
 COPY jitsi-meet-web-src/css/kanvene-custom-theme.css /usr/share/jitsi-meet/css/kanvene-custom-theme.css
 
-# Copy custom logos (if they exist)
-COPY jitsi-meet-web-src/images/jitsilogo.png /usr/share/jitsi-meet/images/jitsilogo.png 2>/dev/null || true
-COPY jitsi-meet-web-src/images/watermark.svg /usr/share/jitsi-meet/images/watermark.svg 2>/dev/null || true
+# Copy custom logos
+COPY jitsi-meet-web-src/images/jitsilogo.png /usr/share/jitsi-meet/images/jitsilogo.png
+COPY jitsi-meet-web-src/images/kanvene-logo.svg /usr/share/jitsi-meet/images/kanvene-logo.svg
 
 # Image inherits from jitsi/web, so all entry points and services are already configured

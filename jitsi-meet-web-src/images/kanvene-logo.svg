@@ -1,0 +1,30 @@
+<svg viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="kanvene-left-grad" x1="32" y1="32" x2="128" y2="224" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stopColor="#4F46E5" />
+            <stop offset="100%" stopColor="#7C3AED" />
+        </linearGradient>
+
+        <linearGradient id="kanvene-right-grad" x1="128" y1="224" x2="224" y2="32" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stopColor="#DB2777" />
+            <stop offset="100%" stopColor="#9333EA" />
+        </linearGradient>
+
+        <radialGradient id="kanvene-glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(128 128) rotate(90) scale(60)">
+            <stop offset="0%" stopColor="white" stopOpacity="1" />
+            <stop offset="100%" stopColor="white" stopOpacity="0" />
+        </radialGradient>
+    </defs>
+
+    <!-- Left moon piece -->
+    <path d="M96 40C60 56 32 96 32 128C32 160 60 200 96 216V176C76 166 64 148 64 128C64 108 76 90 96 80V40Z" fill="url(#kanvene-left-grad)" />
+    
+    <!-- Right moon piece -->
+    <path d="M160 40C196 56 224 96 224 128C224 160 196 200 160 216V176C180 166 192 148 192 128C192 108 180 90 160 80V40Z" fill="url(#kanvene-right-grad)" />
+    
+    <!-- Central star -->
+    <path d="M128 88L142 114L168 128L142 142L128 168L114 142L88 128L114 114L128 88Z" fill="white" />
+    
+    <!-- Glow effect -->
+    <circle cx="128" cy="128" r="32" fill="url(#kanvene-glow)" style="mix-blend-mode: overlay" />
+</svg>
