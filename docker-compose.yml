@@ -9,6 +9,7 @@ services:
         volumes:
             - ${CONFIG}/web:/config
             - ${CONFIG}/web/crontabs:/var/spool/cron/crontabs
+            - ./jitsi-meet-web-src:/usr/share/jitsi-meet
         labels:
             service: "jitsi-web"
         environment:
