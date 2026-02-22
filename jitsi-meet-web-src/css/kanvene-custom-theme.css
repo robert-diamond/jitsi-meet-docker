@@ -9,6 +9,36 @@
   --kanvene-light: #e8f4f8; /* Kanvene Light */
 }
 
+/* Hide Jitsi logos and branding */
+.jitsi-logo,
+[src*="jitsilogo"],
+[src*="logo"],
+.brand-logo {
+  display: none !important;
+}
+
+/* Hide meeting creation section on welcome page */
+#home .welcome,
+.welcome-container,
+#premeetingScreen,
+.preamble {
+  display: none !important;
+}
+
+/* Hide Jitsi Meet title/branding in header */
+.header-brand,
+.brand-name,
+[alt*="Jitsi"],
+.jitsi-title {
+  display: none !important;
+}
+
+/* Replace with no meeting creation UI */
+.no-meetings-message,
+.welcome-page-content {
+  display: none !important;
+}
+
 /* Header and Navigation */
 .toolbox-content-items,
 .toolbox-button:hover {
